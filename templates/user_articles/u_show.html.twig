@@ -4,7 +4,7 @@
 {% endblock %}
 
 {% block body %}
-	<h1>Article</h1>
+	<h1>{{ article.name }}</h1>
 	<img src="{{ asset('uploads/images/' ~ article.picturemain)}}">
 
 	<table class="table">
@@ -49,6 +49,8 @@
 		<h5>Manuel</h5>
 		<a href="{{ asset('uploads/images/' ~ article.manual) }}">Voir le manuel (PDF)</a>
 
-		<a href="{{ path('article_index') }}">back to list</a>
+
 	</div>
+	<h5>Retour</h5>
+	<a href="{{ path('u_allarticles') }}">back to list</a>
 {% endblock %}
