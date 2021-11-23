@@ -7,7 +7,7 @@
 			{% endblock %}
 		</title>
 		{# Run `composer require symfony/webpack-encore-bundle`
-								           and uncomment the following Encore helpers to start using Symfony UX #}
+														and uncomment the following Encore helpers to start using Symfony UX #}
 		{% block stylesheets %}
 			{#{{ encore_entry_link_tags('app') }}#}
 		{% endblock %}
@@ -16,12 +16,23 @@
 			{#{{ encore_entry_script_tags('app') }}#}
 		{% endblock %}
 	</head>
-	<header>
-		<a href={{ path('article_index') }}>Produits</a>
-		<a href={{ path('category_index') }}>Catégories</a>
-		<a href={{ path('tag_index') }}>Tags</a>
-	</header>
+	{% if app.user %}
+		You are logged in as
+		{{ app.user.username }},
+		<a href="{{ path('app_logout') }}">Logout</a>
+		<div>
+			<a href={{ path('article_index') }}>Modifier les Produits</a>
+			<a href={{ path('category_index') }}>Modifier les Catégories</a>
+			<a href={{ path('tag_index') }}>Modifier les Tags</a>
+		</div>
+	{% else %}
+		<a href="{{ path('app_login') }}">Login</a>
+	{% endif %}
+	<div>
+		<a href={{ path('u_allarticles') }}>Produits</a>
+	</div>
+	<header></header>
 	<body>
 		{% block body %}{% endblock %}
 	</body>
-</html>
+</html></html>
