@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 23 nov. 2021 à 15:03
+-- Généré le : mar. 23 nov. 2021 à 15:33
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.4.9
 
@@ -43,16 +43,17 @@ CREATE TABLE IF NOT EXISTS `article` (
   `fk_category_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `IDX_23A0E667BB031D6` (`fk_category_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `article`
 --
 
 INSERT INTO `article` (`id`, `ean`, `name`, `teaser`, `description`, `price`, `stock`, `picturemain`, `picturefront`, `pictureback`, `manual`, `fk_category_id`) VALUES
-(1, 'EAN63202101', 'Playmobil Novelmore - Aérostat de Dario', 'Avec Playmobil Novelmore, l\'Aérostat de Dario, votre enfant imagine de nouvelles histoires médiévales pour ses figurines Playmobil. Bienvenue à Novelmore, chevaliers !', 'Bienvenue à Novelmore, chevaliers ! La ville médiévale de Novelmore est devenue célèbre suite à la création de l\'armure \"Invicibus\". Son pouvoir mythique rend invincible celui qui la porte !', 4854, 200, 'GU855215-6-619cd07455f36.jpg', 'GU855215-6-1-619cd074569dd.jpg', 'GU855215-6-2-619cd074575d0.jpg', 'pdf-exemple-619cd36c33472.pdf', 2),
+(1, 'EAN63202101', 'Playmobil Novelmore - Aérostat de Dario', 'Avec Playmobil Novelmore, l\'Aérostat de Dario, votre enfant imagine de nouvelles histoires médiévales pour ses figurines Playmobil. Bienvenue à Novelmore, chevaliers !', 'Bienvenue à Novelmore, chevaliers ! La ville médiévale de Novelmore est devenue célèbre suite à la création de l\'armure \"Invicibus\". Son pouvoir mythique rend invincible celui qui la porte !', 4899, 200, 'GU855215-6-619cd07455f36.jpg', 'GU855215-6-1-619cd074569dd.jpg', 'GU855215-6-2-619cd074575d0.jpg', 'pdf-exemple-619cd36c33472.pdf', 2),
 (9, 'EAN63202102', 'Playmobil Novelmore - Char du trésor des Chevalier', 'Avec Playmobil Novelmore et le Char du trésor des Chevaliers, votre enfant imagine de nouvelles histoires médiévales pour ses figurines Playmobil', 'Votre enfant découvre la ville médiévale de Novelmore qui brille d’une nouvelle splendeur grâce aux trois héros Arwynn, Dario Da Vanci et Gwynn. Dario a inventé l’armure « Invincibus », dont le pouvoir mythique rend invincible quiconque la porte. Votre enfant découvrira également les Burnham Raiders, une bande de hors-la-loi et de bandits de grands chemins avec un penchant pour le feu. Ils ont eux aussi entendu parler de cette invention grandiose et des batailles féroces se préparent pour s’emparer de la puissante armure… Bienvenue à Novelmore cher aventurier ! \r\n\r\nAujourd\'hui les Chevaliers reviennent au Royaume de Novelmore avec un trésor. Ce dernier se trouve sur le char tiré par un groupe de loups. Pour se protéger d\'une attaque des Burnham Raiders, le char dispose d\'une baliste prête à tirer des projectiles. Les chevaliers possèdent également un canon pour les batailles féroces.', 5000, 4000, 'GU819290-6-619d017e03ab9.jpg', 'GU819290-6-1-619d017e044d6.jpg', 'GU819290-6-2-619d017e04bc0.jpg', 'pdf-exemple-619d01996dee7.pdf', 2),
-(10, 'EAN63202103', 'Calendrier de l\'Avent Playmobil - Animaux de la fe', 'Avec le Calendrier de l\'Avent Playmobil, les animaux de la ferme, votre enfant décompte les jours jusqu\'à Noël.', 'En attendant le passage du Père Noël, votre enfant ouvre, chaque jour, l\'une des 24 fenêtres pour découvrir une surprise. Au fil des jours, votre enfant va pouvoir construire une mise en scène complète afin d\'inventer de nouvelles histoires pour ses figurines Playmobil pendant des heures de jeu.\r\n\r\nTout le monde participe à la vie de la ferme et s\'occupe des animaux. Toutes les tâches doivent être réalisées avant le réveillon de Noël. Les enfants adorent s’occuper des animaux avec le fermier et leur amènent du foin frais avec le tracteur à remorque et pelle inclinable.\r\n\r\nAvec ce calendrier de l\'avent, votre enfant suscite son imagination et créé de nombreuses scènes débordantes de réalisme pour ces personnages, ces animaux de la ferme et leurs petits : poule, cochons, vaches, lapins, chats...', 3599, 16, 'GU742441-6-619d0273ae0ba.jpg', 'GU742441-6-1-619d0273aea0b.jpg', 'GU742441-6-2-619d0273af1ae.jpg', 'pdf-exemple-619d0273af9c9.pdf', 2);
+(10, 'EAN63202103', 'Calendrier de l\'Avent Playmobil - Animaux de la fe', 'Avec le Calendrier de l\'Avent Playmobil, les animaux de la ferme, votre enfant décompte les jours jusqu\'à Noël.', 'En attendant le passage du Père Noël, votre enfant ouvre, chaque jour, l\'une des 24 fenêtres pour découvrir une surprise. Au fil des jours, votre enfant va pouvoir construire une mise en scène complète afin d\'inventer de nouvelles histoires pour ses figurines Playmobil pendant des heures de jeu.\r\n\r\nTout le monde participe à la vie de la ferme et s\'occupe des animaux. Toutes les tâches doivent être réalisées avant le réveillon de Noël. Les enfants adorent s’occuper des animaux avec le fermier et leur amènent du foin frais avec le tracteur à remorque et pelle inclinable.\r\n\r\nAvec ce calendrier de l\'avent, votre enfant suscite son imagination et créé de nombreuses scènes débordantes de réalisme pour ces personnages, ces animaux de la ferme et leurs petits : poule, cochons, vaches, lapins, chats...', 3599, 16, 'GU742441-6-619d0273ae0ba.jpg', 'GU742441-6-1-619d0273aea0b.jpg', 'GU742441-6-2-619d0273af1ae.jpg', 'pdf-exemple-619d0273af9c9.pdf', 2),
+(11, 'EAN63202104', 'Star Wars Grogu bébé Yoda', 'Découvrez et craquez pour l\'adorable modèle de l’Enfant LEGO® Star Wars™ à construire, à collectionner et à exposer !', 'Les fans de lego star wars vont fondre de tendresse devant le modèle L’Enfant (75318) LEGO® Star Wars™. Vous serez stupéfaits devant les détails authentiques de ce personnage bien connu, affectueusement appelé Bébé Yoda !\r\n\r\nLa tête et les oreilles de ce magnifique personnage ont été recrées dans le style LEGO®, sa bouche articulée permet même de créer différentes expressions ! L\'Enfant peut également tenir dans la main son jouet préféré, la boule d\'une manette de vaisseau (élément inclus), comme il le fait dans le film Star Wars : The Mandalorian.\r\n\r\nTout a été pensé pour que les constructeurs LEGO, même les plus débutants puissent construire cet incroyable modèle de L\'enfant. Le set inclut des instructions illustrées de montage claires et vous accompagne étape par étape pendant toute la durée de la construction. Ainsi, pas besoin de faire appel à la Force pour assembler les briques ce joli personnage LEGO®, vous ne pourrez qu\'apprécier cette expérience créative et amusante ! \r\n\r\nCette fascinante pièce de L’Enfant Bébé Yoda LEGO® Star Wars™ tiré du film Star Wars : The Mandalorian est constituée de 1 073 pièces et mesure plus de 19 cm de haut, 21 cm de large et 13 cm de profondeur. \r\n\r\nEn plus d\'être une magnifique pièce à exposer, la construction de cette nouveauté lego 2020 représente un formidable moyen de se détendre seul, en famille ou entre amis. Les passionnés de lego Star Wars vont adorer prendre le temps de créer ce fantastique modèle en briques Star Wars™.', 7099, 88, 'GU821423-6-619d09b511d88.jpg', 'GU821423-6-3-619d09b512494.jpg', 'GU821423-6-2-619d09b512abe.jpg', 'pdf-exemple-619d09b5133e6.pdf', 3);
 
 -- --------------------------------------------------------
 
@@ -82,7 +83,8 @@ INSERT INTO `article_tag` (`article_id`, `tag_id`) VALUES
 (9, 6),
 (10, 2),
 (10, 3),
-(10, 5);
+(10, 5),
+(11, 6);
 
 -- --------------------------------------------------------
 
@@ -97,7 +99,7 @@ CREATE TABLE IF NOT EXISTS `category` (
   `teaser` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `picture` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `category`
@@ -105,7 +107,8 @@ CREATE TABLE IF NOT EXISTS `category` (
 
 INSERT INTO `category` (`id`, `name`, `teaser`, `picture`) VALUES
 (1, 'Jouet moins de 3 ans', 'Tout pour s\'éveiller', NULL),
-(2, 'Playmobile', 'En avant les histoires!', NULL);
+(2, 'Playmobile', 'En avant les histoires!', NULL),
+(3, 'Lego', 'Lego world!', NULL);
 
 -- --------------------------------------------------------
 
