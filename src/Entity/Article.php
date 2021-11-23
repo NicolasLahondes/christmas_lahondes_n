@@ -3,7 +3,10 @@
 namespace App\Entity;
 
 use App\Repository\ArticleRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=ArticleRepository::class)
@@ -19,11 +22,14 @@ class Article
 
     /**
      * @ORM\Column(type="string", length=13, nullable=true)
+     * @Assert\NotBlank
      */
     private $ean;
 
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\NotBlank
+     * @Assert\Type("string")
      */
     private $name;
 
@@ -39,11 +45,13 @@ class Article
 
     /**
      * @ORM\Column(type="float")
+     * @Assert\NotBlank
      */
     private $price;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
+     * @Assert\Type("int")
      */
     private $stock;
 
@@ -66,6 +74,21 @@ class Article
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $manual;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="articles")
+     */
+    private $fk_category;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Tag::class, inversedBy="articles")
+     */
+    private $fk_tags;
+
+    public function __construct()
+    {
+        $this->fk_tags = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -188,6 +211,42 @@ class Article
     public function setManual(?string $manual): self
     {
         $this->manual = $manual;
+
+        return $this;
+    }
+
+    public function getFkCategory(): ?Category
+    {
+        return $this->fk_category;
+    }
+
+    public function setFkCategory(?Category $fk_category): self
+    {
+        $this->fk_category = $fk_category;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Tag[]
+     */
+    public function getFkTags(): Collection
+    {
+        return $this->fk_tags;
+    }
+
+    public function addFkTag(Tag $fkTag): self
+    {
+        if (!$this->fk_tags->contains($fkTag)) {
+            $this->fk_tags[] = $fkTag;
+        }
+
+        return $this;
+    }
+
+    public function removeFkTag(Tag $fkTag): self
+    {
+        $this->fk_tags->removeElement($fkTag);
 
         return $this;
     }

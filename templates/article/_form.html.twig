@@ -1,0 +1,49 @@
+{{ form_start(form) }}
+<div>
+	<h3>Section principale</h3>
+	<div>
+		{{ form_label(form.ean) }}
+		{{ form_widget(form.ean) }}
+	</div>
+	<div>
+		{{ form_label(form.name) }}
+		{{ form_widget(form.name) }}
+	</div>
+	<div>
+		{{ form_label(form.teaser) }}
+		{{ form_widget(form.teaser) }}
+	</div>
+	<div>
+		{{ form_label(form.description) }}
+		{{ form_widget(form.description) }}
+	</div>
+	<div>
+		{{ form_label(form.price) }}
+		{{ form_widget(form.price) }}
+	</div>
+</div>
+<div>
+	<h3>Section secondaire</h3>
+	<div>
+		{{ form_label(form.stock) }}
+		{{ form_widget(form.stock) }}
+	</div>
+	<div>
+		{{ form_label(form.picturemain) }}
+		{{ form_widget(form.picturemain) }}
+	</div>
+	<div>
+		{{ form_label(form.picturefront) }}
+		{{ form_widget(form.picturefront) }}
+	</div>
+	<div>
+		{{ form_label(form.pictureback) }}
+		{{ form_widget(form.pictureback) }}
+	</div>
+	<div>
+		{{ form_label(form.manual) }}
+		{{ form_widget(form.manual) }}
+	</div>
+</div>
+<button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}
