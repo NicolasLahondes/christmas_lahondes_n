@@ -16,12 +16,13 @@
 				<th>Teaser</th>
 				<th>Description</th>
 				<th>Price</th>
+				<th>Price TTC</th>
 				<th>Stock</th>
 				<th>Categories</th>
 				<th>Tags</th>
 				{# <th>Picturemain</th>
-								<th>Picturefront</th>
-								<th>Pictureback</th> #}
+																												<th>Picturefront</th>
+																												<th>Pictureback</th> #}
 				<th>Manual</th>
 				<th>actions</th>
 			</tr>
@@ -34,7 +35,8 @@
 					<td>{{ article.name }}</td>
 					<td>{{ article.teaser }}</td>
 					<td>{{ article.description }}</td>
-					<td>{{ article.price / 100 ~ ' €' }}</td>
+					<td>{{(article.price / 100)  ~ ' €'}}</td>
+					<td>{{ ((((article.price / 100) / 100) * 20) + (article.price / 100))|round(2) ~ ' €' }}</td>
 					<td>{{ article.stock }}</td>
 					{% if article.getFkCategory.name %}
 						<td>{{ article.getFkCategory.name }}</td>
@@ -48,8 +50,8 @@
 					</td>
 
 					{# <td>{{ article.picturemain }}</td>
-										<td>{{ article.picturefront }}</td>
-										<td>{{ article.pictureback }}</td> #}
+																																			<td>{{ article.picturefront }}</td>
+																																			<td>{{ article.pictureback }}</td> #}
 					<td>{{ article.manual }}</td>
 					<td>
 						<a href="{{ path('article_show', {'id': article.id}) }}">show</a>

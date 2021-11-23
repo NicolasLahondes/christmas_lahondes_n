@@ -28,7 +28,7 @@
 					<td>{{ article.name }}</td>
 					<td>{{ article.teaser }}</td>
 					<td>{{ article.description }}</td>
-					<td>{{ article.price / 100 ~ ' €' }}</td>
+					<td>{{ ((((article.price / 100) / 100) * 20) + (article.price / 100))|round(2) ~ ' €' }}</td>
 					{% if article.getFkCategory.name %}
 						<td>{{ article.getFkCategory.name }}</td>
 					{% endif %}

@@ -23,6 +23,9 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
  */
 class ArticleController extends AbstractController
 {
+
+// Display all Articles
+
     /**
      * @Route("/", name="article_index", methods={"GET"})
      */
@@ -33,6 +36,8 @@ class ArticleController extends AbstractController
             'articles' => $articleRepository->findAll(),
         ]);
     }
+
+// Create a new Article
 
     /**
      * @Route("/new", name="article_new", methods={"GET", "POST"})
@@ -160,6 +165,9 @@ class ArticleController extends AbstractController
             'form' => $form,
         ]);
     }
+
+// Display one article
+
     /**
      * @Route("/{id}", name="article_show", methods={"GET"})
      */
@@ -169,6 +177,8 @@ class ArticleController extends AbstractController
             'article' => $article,
         ]);
     }
+
+// Edit one article
 
     /**
      * @Route("/{id}/edit", name="article_edit", methods={"GET", "POST"})
@@ -297,6 +307,8 @@ class ArticleController extends AbstractController
             'form' => $form,
         ]);
     }
+
+// Delete one article
 
     /**
      * @Route("/{id}", name="article_delete", methods={"POST"})
