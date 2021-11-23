@@ -1,5 +1,6 @@
 {% extends 'base.html.twig' %}
 
+
 {% block title %}Article index
 {% endblock %}
 
@@ -19,8 +20,8 @@
 				<th>Categories</th>
 				<th>Tags</th>
 				{# <th>Picturemain</th>
-				<th>Picturefront</th>
-				<th>Pictureback</th> #}
+								<th>Picturefront</th>
+								<th>Pictureback</th> #}
 				<th>Manual</th>
 				<th>actions</th>
 			</tr>
@@ -43,12 +44,12 @@
 							{% for tag in article.getFkTags %}
 								{{ tag.name }},
 							{% endfor %}
-                    {% endif %}
-						</td>
-			
+						{% endif %}
+					</td>
+
 					{# <td>{{ article.picturemain }}</td>
-					<td>{{ article.picturefront }}</td>
-					<td>{{ article.pictureback }}</td> #}
+										<td>{{ article.picturefront }}</td>
+										<td>{{ article.pictureback }}</td> #}
 					<td>{{ article.manual }}</td>
 					<td>
 						<a href="{{ path('article_show', {'id': article.id}) }}">show</a>

@@ -1,0 +1,26 @@
+.body {
+  background-color: rgb(210, 213, 255);
+}
+.table {
+  background-color: rgb(255, 255, 255);
+  color: rgb(73, 73, 73);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.header {
+  background-color: rgb(39, 39, 39);
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.logo {
+  position: relative;
+  margin-left: 50px;
+  width: 100px;
+  top: 10px;
+}
